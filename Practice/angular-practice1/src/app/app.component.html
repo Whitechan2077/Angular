@@ -1,0 +1,55 @@
+<div class="container-fluid">
+  <div class="row">
+    <h1 class="text-center">{{title}}</h1>
+    <div>
+      <h5> Nội dung chính: </h5>
+      <ul>
+        <li><b>{{q.q1}}</b></li>
+        <li>{{q.q2}}</li>
+        <li>{{q.q3}}</li>
+        <li>{{q.q5}}</li>
+        <li>{{q.q7}}</li>
+        <li>{{q.q8}}</li>
+      </ul>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div>
+      <h5> Component là gì ?: </h5>
+      <ul>
+        <li>Là kết hợp giữa template với properties & method + metadata</li>
+        <li>1 Component là một class chứa View và các thao tác với view giống như JFrame của Swing</li>
+        <li>
+          Trong Component có
+          <ul>
+            <li>selector: tên thẻ để đẩy html vào ?(Hỗ trợ SPA)</li>
+            <li>template: tên file view cần đổ vào selector</li>
+            <li>styleUrl: file css riêng cho Component </li>
+          </ul>
+        </li>
+        <li>Trong class của component sẽ code nhưng hàm sử lý logic ở trên view</li>
+        <li>Gắn kết dữ liệu cách 1 bằng: {{x}}</li>
+        <li>Gắn kết dữ liệu cách 2 bằng: {{x1}} Nhớ import trong Module angular core tên module là model</li>
+        <li>Sử lý sự kiện: {{evt}}</li>
+        <li>VD: <button class="btn btn-success" (click)="a()" type="button">Bấm đây</button>
+          <p>{{text1}}</p>
+        </li>
+        <li>DIRECTIVE - chỉ thị
+          <ul>
+            <li>*ng-if: thẻ chỉ thị điều kiệu if</li>
+            <li>*ng-for: vòng lặp fore</li>
+          </ul>
+          <b>Ví dụ</b>
+          <hr>
+          <ul *ngFor="let item of pdList">
+            <li>Name: {{item.name}}</li>
+            <li>Price: {{item.price}}</li>
+            <li>Quantity: {{item.quantity}}</li>
+            <hr>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
